@@ -56,15 +56,47 @@
 		8C5AFE3424993E8A00F07940 /* AnimationShowcaseApp */ = {
 			isa = PBXGroup;
 			children = (
-				8C5AFE3524993E8A00F07940 /* AppDelegate.swift */,
-				8C5AFE3724993E8A00F07940 /* SceneDelegate.swift */,
-				8C5AFE3924993E8A00F07940 /* ViewController.swift */,
-				8C5AFE3B24993E8A00F07940 /* Main.storyboard */,
-				8C5AFE3E24993E8E00F07940 /* Assets.xcassets */,
-				8C5AFE4024993E8E00F07940 /* LaunchScreen.storyboard */,
-				8C5AFE4324993E8E00F07940 /* Info.plist */,
+				8C5AFE4924993EE000F07940 /* ViewControllers */,
+				8C5AFE4A24993EF100F07940 /* Storyboards */,
+				8C5AFE4B24993F0100F07940 /* Sourse */,
+				8C5AFE4C24993F1200F07940 /* SupportingFiles */,
 			);
 			path = AnimationShowcaseApp;
+			sourceTree = "<group>";
+		};
+		8C5AFE4924993EE000F07940 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C5AFE3924993E8A00F07940 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8C5AFE4A24993EF100F07940 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8C5AFE3B24993E8A00F07940 /* Main.storyboard */,
+				8C5AFE4024993E8E00F07940 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8C5AFE4B24993F0100F07940 /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				8C5AFE3E24993E8E00F07940 /* Assets.xcassets */,
+			);
+			path = Sourse;
+			sourceTree = "<group>";
+		};
+		8C5AFE4C24993F1200F07940 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8C5AFE3524993E8A00F07940 /* AppDelegate.swift */,
+				8C5AFE3724993E8A00F07940 /* SceneDelegate.swift */,
+				8C5AFE4324993E8E00F07940 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +318,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G39AAW7HHA;
-				INFOPLIST_FILE = AnimationShowcaseApp/Info.plist;
+				INFOPLIST_FILE = AnimationShowcaseApp/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +327,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.first.AnimationShowcaseApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +337,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G39AAW7HHA;
-				INFOPLIST_FILE = AnimationShowcaseApp/Info.plist;
+				INFOPLIST_FILE = AnimationShowcaseApp/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.first.AnimationShowcaseApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
