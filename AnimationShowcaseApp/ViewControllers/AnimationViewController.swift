@@ -20,11 +20,7 @@ class AnimationViewController: UIViewController {
         super.viewDidLoad()
         infoAboutAnimationLebel.text =
         """
-        Animation: squeeze
-        Curve: easeInOut
-        Force: 1
-        Delay: 1
-        Duration: 1
+        Information about animation
         """
     }
 
