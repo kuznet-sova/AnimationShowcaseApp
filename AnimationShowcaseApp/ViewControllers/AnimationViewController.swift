@@ -35,44 +35,47 @@ class AnimationViewController: UIViewController {
                 return String(format: "%.2f", value)
             }
             
-            if changeAnimationButton.titleLabel?.text == "Start" {
-                infoAboutAnimationLebel.text =
-                """
-                Animation: \(animations[index].animation)
-                Curve: \(animations[index].curve)
-                Force: \(rounding(value: animations[index].force))
-                Delay: \(rounding(value: animations[index].delay))
-                Duration: \(rounding(value: animations[index].duration))
-                """
-                animationView.animation = "\(animations[index].animation)"
-                animationView.curve = "\(animations[index].curve)"
-                animationView.force = animations[index].force
-                animationView.delay = animations[index].delay
-                animationView.duration =  animations[index].duration
+            switch changeAnimationButton.titleLabel?.text {
+                case "Start":
+                    infoAboutAnimationLebel.text =
+                    """
+                    Animation: \(animations[index].animation)
+                    Curve: \(animations[index].curve)
+                    Force: \(rounding(value: animations[index].force))
+                    Delay: \(rounding(value: animations[index].delay))
+                    Duration: \(rounding(value: animations[index].duration))
+                    """
+                    animationView.animation = "\(animations[index].animation)"
+                    animationView.curve = "\(animations[index].curve)"
+                    animationView.force = animations[index].force
+                    animationView.delay = animations[index].delay
+                    animationView.duration =  animations[index].duration
+
+                    animationView.animate()
+
+                    changeAnimationButton.setTitle("\(animations[index+1].animation)", for: .normal)
                 
-                animationView.animate()
+                case "\(animations[index].animation)":
+                    infoAboutAnimationLebel.text =
+                    """
+                    Animation: \(animations[index].animation)
+                    Curve: \(animations[index].curve)
+                    Force: \(rounding(value: animations[index].force))
+                    Delay: \(rounding(value: animations[index].delay))
+                    Duration: \(rounding(value: animations[index].duration))
+                    """
+                        
+                    animationView.animation = "\(animations[index].animation)"
+                    animationView.curve = "\(animations[index].curve)"
+                    animationView.force = animations[index].force
+                    animationView.delay = animations[index].delay
+                    animationView.duration =  animations[index].duration
                     
-                changeAnimationButton.setTitle("\(animations[index+1].animation)", for: .normal)
-            }
-            else {
-                infoAboutAnimationLebel.text =
-                """
-                Animation: \(animations[index+1].animation)
-                Curve: \(animations[index+1].curve)
-                Force: \(rounding(value: animations[index+1].force))
-                Delay: \(rounding(value: animations[index+1].delay))
-                Duration: \(rounding(value: animations[index+1].duration))
-                """
+                    animationView.animate()
+                        
+                    changeAnimationButton.setTitle("\(animations[index+1].animation)", for: .normal)
                     
-                animationView.animation = "\(animations[index].animation)"
-                animationView.curve = "\(animations[index].curve)"
-                animationView.force = animations[index].force
-                animationView.delay = animations[index].delay
-                animationView.duration =  animations[index].duration
-                
-                animationView.animate()
-                    
-                changeAnimationButton.setTitle("\(animations[index+1].animation)", for: .normal)
+                default: break
             }
         }
     }
